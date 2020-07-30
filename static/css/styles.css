@@ -1,0 +1,90 @@
+.Logo {
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+.LogoText {
+    display: inline-block;
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.BodyBackground {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+input {
+    width: 350px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid #52c1f9;
+    margin: 10px 0 10px 0;
+}
+
+.SaveUseraccount {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+}
+
+.SaveUseraccountText {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 11pt;
+    color: white;
+}
+
+.SaveAndEnter {
+    margin-top: -20px;
+}
+
+.Form {
+    width: 355px;
+    margin: 100px 0 0 90px;
+}
+
+label {
+    color: lightgray;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.EnterButton {
+    border: none;
+    width: 175px;
+    height: 40px;
+    color: white;
+    background-color: #52c1f9;
+    border: 2px solid white;
+    float: right;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+.RegistrationButton {
+    border: none;
+    height: 40px;
+    color: black;
+    background-color: #7efa86;
+    border: 2px solid white;
+    float: right;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+.Authorized {
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 11pt;
+    margin-bottom: 30px;
+}

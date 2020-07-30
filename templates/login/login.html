@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Esoft - Аутентификация</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body class="BodyBackground" style="background-image: url('{% static "img/flying-taxi.jpg" %}')">
+    <div>
+        <img class="Logo" src="{% static "img/Logo.png" %}">
+        <p class="LogoText">DRON TAXI</p>
+    </div>
+    <form class="Form" method="POST" id="authForm"> 
+        <p class="Authorized"> АВТОРИЗАЦИЯ </p>
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="FormGroup">
+            {{field.label_tag}}
+            <br>
+            {{field}}
+        </div>
+        {% endfor %}
+        <br>
+        <div class="SaveAndEnter">
+            <input class="SaveUseraccount" type="checkbox">
+            <p class="SaveUseraccountText">Запомнить</p>
+            <input class="EnterButton" type="submit" value="Войти">
+        </div>
+        <input class="RegistrationButton" type="submit" value="Регистрация">
+    </form>
+    {% if error %}
+    <div class="ErrorBlock">
+        <p class="Message">Неверный логин или пароль</p>
+    </div>
+    {% endif %}
+</body>
+</html>
