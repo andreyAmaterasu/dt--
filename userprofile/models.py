@@ -1,5 +1,7 @@
 from django.db import models
 
+from django.db import models
+
 class Useraccount(models.Model):
     email = models.CharField(primary_key=True, max_length=50)
     password = models.CharField(max_length=50)

@@ -5,6 +5,10 @@
     margin: 10px;
 }
 
+body {
+    margin: 0;
+}
+
 .LogoText {
     display: inline-block;
     color: white;
@@ -17,6 +21,67 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.BodyProfile {
+    background-color: #821d80;
+}
+
+.MyProfile {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 16pt;
+    color: white;
+}
+
+.ProfileTD {
+    border-bottom: 2px solid #52c1f9;
+    width: 300px;
+    padding: 0 0 0 20px;
+    height: 10px;
+    font-family: Helvetica;
+    font-size: 11pt;
+    color: white;
+}
+
+.ProfileTDD {
+    border-bottom: 2px solid #52c1f9;
+    width: 150px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    font-family: Helvetica;
+    font-size: 11pt;
+    color: white;
+}
+
+.HeaderInf {
+    font-weight: bold;
+    font-family: Helvetica;
+    font-size: 10pt;
+    color: lightgray;
+}
+
+.ProfileArea {
+    height: 100vh;
+    width: 70vw;
+    background-color: #651565;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 50px;
+}
+
+.TableInformation {
+    position: absolute; 
+    right: 0;
+    margin-right: 50px;
+}
+
+.InformationArea {
+    height: 60vh;
+    width: 100vw;
+    background-color: #821d80;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 input {
@@ -46,7 +111,7 @@ input {
     margin-top: -20px;
 }
 
-.Form {
+.AuthForm {
     width: 355px;
     margin: 100px 0 0 90px;
 }
@@ -70,15 +135,45 @@ label {
     font-weight: bold;
 }
 
+.HeaderReg {
+    color: white;
+    font-family: Helvetica;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
 .RegistrationButton {
-    border: none;
     height: 40px;
     color: black;
     background-color: #7efa86;
     border: 2px solid white;
-    float: right;
     font-size: 11pt;
     font-weight: bold;
+    width: 350px;
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+}
+
+.UserTD {
+    height: 0px;
+}
+
+.Header {
+    color: lightgray;
+    font-family: Helvetica;
+    font-size: 10pt;
+    height: 0px;
+}
+
+.UserTable {
+    background-color: #751a7c;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 20px 5px 20px;
+}
+
+.LogPage {
+    float: right;
 }
 
 .Authorized {
@@ -87,4 +182,21 @@ label {
     font-weight: bold;
     font-size: 11pt;
     margin-bottom: 30px;
+}
+
+.ErrorBlock {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #9c2898;
+    display: block;
+}
+
+.Message {
+    color: white;
+    font-family: Helvetica;
+    font-size: 11pt;
+    padding: 10px;
+    text-align: center;
 }

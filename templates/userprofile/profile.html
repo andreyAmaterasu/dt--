@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+{{ user_context|json_script:"user_json" }}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dron Taxi - Профиль</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+    <script src="{% static "js/vue.min.js" %}"></script>
+    <script src="{% static "js/axios.min.js" %}"></script>
+    <script src="{% static "js/vue-router.js" %}"></script>
+</head>
+<body class="BodyProfile">
+    <div>
+        <img class="Logo" src="{% static "img/Logo.png" %}">
+        <p class="LogoText">DRON TAXI</p>
+    </div>
+    <div id="app1">
+        <div class="ProfileArea">
+            <p class="MyProfile">Мой профиль</p>
+            <div class="InformationArea">
+                <table class="TableInformation" v-for="jsonuser in users" v-if="jsonuser.email == user.email">
+                    <tr>
+                        <td class="HeaderInf" colspan="2"><p>Фамилия</p></td>
+                        <td class="HeaderInf" colspan="2"><p>Email</p></td>
+                    </tr>
+                    <tr>
+                        <td class="ProfileTD" colspan="2"><p>[[jsonuser.lastname]]</p></td>
+                        <td class="ProfileTD" colspan="2"><p>[[jsonuser.email]]</p></td>
+                    </tr>
+                    <tr>
+                        <td class="HeaderInf" colspan="2"><p>Имя</p></td>
+                        <td class="HeaderInf" colspan="2"><p>Телефон</p></td>
+                    </tr>
+                    <tr>
+                        <td class="ProfileTD" colspan="2"><p>[[jsonuser.firstname]]</p></td>
+                        <td class="ProfileTD" colspan="2"><p>[[jsonuser.phone_number]]</p></td>
+                    </tr>
+                    <tr>
+                        <td class="HeaderInf" colspan="2"><p>Отчество</p></td>
+                        <td class="HeaderInf" colspan="2"><p>Пароль</p></td>
+                    </tr>
+                    <tr>
+                        <td class="ProfileTD" colspan="2"><p>[[jsonuser.patronymic]]</p></td>
+                        <td class="ProfileTD" colspan="2"><p>[[jsonuser.password]]</p></td>
+                    </tr>
+                    <tr>
+                        <td class="HeaderInf"><p>Дата рождения</p></td>
+                        <td class="HeaderInf"><p>Пол</p></td>
+                    </tr>
+                    <tr>
+                        <td class="ProfileTDD" >[[jsonuser.date_of_birth]]</td>
+                        <td class="ProfileTDD" >[[jsonuser.gender]]</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="{% static "js/profile.vue.js" %}"></script>
+</body>
+</html>
